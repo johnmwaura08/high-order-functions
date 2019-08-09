@@ -78,7 +78,7 @@ const retailCompanies = companies.filter( company=> company.category === "Retail
   // });
 
   // console.log (companyNames);
-
+ // 
 //   const companyNames = companies.map ( company => company.name); //see, arrow functions are so so much easier. basically map is like getting stuff from an array and putting it into another
 //   console.log (companyNames);
 
@@ -161,3 +161,17 @@ const ageSum = ages.reduce ((total,miaka) => total + miaka, 0);
 
 
 console.log(ageSum);
+// get total years for all companies
+
+const totalYears = companies.reduce ((total, company ) => total + ( company.end - company.start) , 0);
+
+console.log(totalYears);
+
+//////////////////////////////////////// combine methods
+ const combined = ages
+   .map ( age => (age * 2)) // this will give us an array of all the ages times two
+  .filter( age => ( age >= 40)) // we're filtering all the ages that are 40 and above
+ .sort((a,b) => a-b) // sorted from lowest to highest
+ .reduce ((a, b ) => a+ b ,0);
+
+console.log( combined);
