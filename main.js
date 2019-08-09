@@ -64,15 +64,100 @@ const retailCompanies = companies.filter( company=> company.category === "Retail
   // get companies that lasted 10 yrs
   const lastedTenYears = companies.filter ( company=> ( company.end - company. start >=10));
   console.log(lastedTenYears);
-  
-
-
-  //////////////Map()
 
 
 
-  ///////////////Sort()
+  ////////////////////////////////////////////////////////Map()
+
+
+  //create array of company names
+
+  // const companyNames = companies.map(function(company){
+  //   return company.name;
+
+  // });
+
+  // console.log (companyNames);
+
+//   const companyNames = companies.map ( company => company.name); //see, arrow functions are so so much easier. basically map is like getting stuff from an array and putting it into another
+//   console.log (companyNames);
 
 
 
-  ///////Reduce()
+
+// const testMap = companies.map(company => `${company.name} [${company.start}- ${company.end}]`); //such an easier way
+// console.log(testMap);
+
+// const tryMap = companies.map ( kampuni=> `${kampuni.name} : ${kampuni.category}`);
+// console.log(tryMap);
+
+const jaribuMap = companies.map ( kampani=> `${kampani.name}: ${kampani.category}: [${kampani.start}-${kampani.end}]`); //you get the idea now. the dollar sign and curly braces and the inverted apostrophe make work easier
+console.log (jaribuMap);
+
+
+//get ages and squareroot  them
+
+
+const agesSquare = ages.map (age => Math.sqrt(age)); //we get an array of the square root of the ages
+console.log(agesSquare);
+
+//lets try ages times 2
+
+const agesTimesTwo = ages.map ( age => (age * 2));
+console.log ( agesTimesTwo);
+
+// lets square root them and then times by two
+
+const ageMap = ages
+   .map(age => Math.sqrt(age))   //you'll have to put them on separate lines. its like basically combining the map functions. map is very powerful man
+   .map(age => (age*2));
+
+   console.log(ageMap);
+
+
+  /////////////////////////////////////////////Sort()
+
+
+  //lets sort the companies by the start years
+
+  // const sortedCompanies = companies.sort( function(c1, c2){
+  //   if (c1.start > c2.start){
+  //     return 1;
+  //   }    // this returns the companies with theirs starting date in order
+  //   else {
+  //     return -1;
+  //   }
+
+  // }); 
+
+  // lets write that in a shorter form
+
+const sortedCompanies = companies.sort((a,b) => ( a.start > b.start ? 1 : -1)); //so much easier plus we used a ternary operator // c1,c2 is the same as a,b..a, b is just the industry standard
+
+
+  console.log(sortedCompanies);
+  //sort ages
+
+  const sortAges = ages.sort( (a,b) => a -b ); //gives the ages in ascending order 
+   // if you want the ages in descending order go ahead and do b - a
+  //  const sortAges = ages.sort( (a,b) => b -a ); 
+
+  console.log(sortAges);
+
+
+
+///////////////////////////////////////  ///////Reduce()
+
+
+//lets add all the ages together
+
+// let ageSum = 0; // lets try with a for loop first
+// for ( let i =0; i < ages.length; i++){
+//   ageSum += ages[i];
+// }
+//  // now look at the elegant way using es6
+
+const ageSum = ages.reduce ((total,miaka) => total + miaka, 0);
+
+
+console.log(ageSum);
