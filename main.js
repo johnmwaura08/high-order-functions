@@ -11,20 +11,41 @@ const companies = [
   ];
   
   const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
-  //ForEach()
+  /*****//////ForEach()///*/
+//  using for loop
+  // for (let i =0; i< companies.length; i++){
+  //   console.log(companies[i]);
 
-console.log(companies);
+  // }
+ //now look at forEach
 
-  //Filter()
-
-
-
-  //Map()
-
-
-
-  //Sort()
+//  companies.forEach(function(mzegede){ //the variable that goes inside the function could be anything i mean any name. you can do mzegede.name or even mzegede.start
+//    console.log(mzegede.category)
+//  })
 
 
 
-  //Reduce()
+
+
+
+  //////////////Filter()
+//lets use for loop first
+
+let canDrink = []; //we're defining an empty array first
+for( let i =0; i< ages.length; i++){
+  if ( ages[i] >= 21){
+    canDrink.push(ages[i]);
+  }
+
+}
+console.log(canDrink);
+
+  //////////////Map()
+
+
+
+  ///////////////Sort()
+
+
+
+  ///////Reduce()
