@@ -1,0 +1,1 @@
+Learning about ForEach, filter, map, sort &  reduce and how to combine all of them. 
