@@ -26,19 +26,34 @@ const companies = [
 
 
 
-
-
   //////////////Filter()
-//lets use for loop first
+//lets use for loop first to get 21 & over
 
-let canDrink = []; //we're defining an empty array first
-for( let i =0; i< ages.length; i++){
-  if ( ages[i] >= 21){
-    canDrink.push(ages[i]);
-  }
+// let canDrink = []; //we're defining an empty array first
+// for( let i =0; i< ages.length; i++){
+//   if ( ages[i] >= 21){
+//     canDrink.push(ages[i]);
+//   }
 
-}
-console.log(canDrink);
+// }
+// console.log(canDrink); 
+
+// using arrow function with the filter
+
+ const canDrink = ages.filter( age => age>=21);
+ console.log(canDrink); 
+ // filter retail companies
+  // const retailCompanies = companies.filter(function(company){
+  //     if(company.category === "Retail"){
+  //       return true;
+  //     }
+  // });
+
+
+// now using arrow functions
+
+const retailCompanies = companies.filter( company=> company.category === "Retail");
+  console.log(retailCompanies);
 
   //////////////Map()
 
