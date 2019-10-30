@@ -91,7 +91,7 @@ const retailCompanies = companies.filter( company=> company.category === "Retail
 // const tryMap = companies.map ( kampuni=> `${kampuni.name} : ${kampuni.category}`);
 // console.log(tryMap);
 
-const jaribuMap = companies.map ( kampani=> `${kampani.name}: ${kampani.category}: [${kampani.start}-${kampani.end}]`); //you get the idea now. the dollar sign and curly braces and the inverted apostrophe make work easier
+const jaribuMap = companies.map ( kampuni=> `${kampuni.name}: ${kampuni.category}: [${kampuni.start}-${kampuni.end}]`); //you get the idea now. the dollar sign and curly braces and the inverted apostrophe make work easier
 console.log (jaribuMap);
 
 
